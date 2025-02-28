@@ -1,3 +1,4 @@
+import Header from '@/components/header'
 import { createRootRoute, Outlet } from '@tanstack/react-router'
 import { lazy, Suspense } from 'react'
 const TanStackRouterDevtools = import.meta.env.PROD
@@ -11,6 +12,7 @@ const TanStackRouterDevtools = import.meta.env.PROD
 
 const RootComponent = () => (
   <>
+    <Header />
     <Outlet />
 
     <Suspense>
