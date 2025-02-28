@@ -1,10 +1,21 @@
 import { createRootRoute, Outlet } from '@tanstack/react-router'
-import { TanStackRouterDevtools } from '@tanstack/router-devtools'
+import { lazy, Suspense } from 'react'
+const TanStackRouterDevtools = import.meta.env.PROD
+  ? () => null
+  : lazy(() =>
+      // Lazy load in development
+      import('@tanstack/router-devtools').then((res) => ({
+        default: res.TanStackRouterDevtools,
+      }))
+    )
 
 const RootComponent = () => (
   <>
     <Outlet />
-    <TanStackRouterDevtools />
+
+    <Suspense>
+      <TanStackRouterDevtools />
+    </Suspense>
   </>
 )
 
