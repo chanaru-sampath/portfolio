@@ -1,10 +1,11 @@
-import Header from '@/components/header'
-import { createRootRoute, Outlet } from '@tanstack/react-router'
 import { lazy, Suspense } from 'react'
+import { createRootRoute, Outlet } from '@tanstack/react-router'
+
+import Header from '@/components/header'
+
 const TanStackRouterDevtools = import.meta.env.PROD
   ? () => null
   : lazy(() =>
-      // Lazy load in development
       import('@tanstack/router-devtools').then((res) => ({
         default: res.TanStackRouterDevtools,
       }))
@@ -12,8 +13,10 @@ const TanStackRouterDevtools = import.meta.env.PROD
 
 const RootComponent = () => (
   <>
-    <Header />
-    <Outlet />
+    <div className="mx-auto max-w-[1200px] px-5">
+      <Header />
+      <Outlet />
+    </div>
 
     <Suspense>
       <TanStackRouterDevtools />
