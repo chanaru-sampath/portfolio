@@ -1,45 +1,20 @@
-import { Link, useMatchRoute } from '@tanstack/react-router'
-import { cn } from '@/lib/utils'
 import Logo from './logo'
-
-const navLinks = [
-  { name: 'Home', path: '/' },
-  { name: 'Contact', path: '/contact' },
-]
+import { DesktopNav, MobileNav } from './navbar'
 
 const Header = () => {
-  const matchRoute = useMatchRoute()
-
   return (
-    <header className="fixed top-0 left-0 w-full bg-white shadow-md z-50 font-mono">
-      <div className="mx-auto max-w-[1000px] flex items-center justify-between py-4 px-6">
-        {/* Logo */}
-        <Logo />
+    <header className="py-4 xl:py-6 flex justify-between items-center">
+      {/* Logo */}
+      <Logo />
 
-        {/* Navigation */}
-        <nav>
-          <ul className="flex space-x-8 text-gray-500 font-medium">
-            {navLinks.map((link) => {
-              const isActive = matchRoute({ to: link.path })
+      {/* Desktop Navigation */}
+      <div className="hidden xl:flex">
+        <DesktopNav />
+      </div>
 
-              return (
-                <li key={link.name}>
-                  <Link
-                    to={link.path}
-                    className={cn(
-                      'relative px-2 py-1 transition-all hover:text-black uppercase',
-                      isActive
-                        ? 'text-black pt-[15px] font-bold border-t-4 border-orange-500'
-                        : 'border-t-4 border-transparent'
-                    )}
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              )
-            })}
-          </ul>
-        </nav>
+      {/* Mobile Navigation */}
+      <div className="xl:hidden">
+        <MobileNav />
       </div>
     </header>
   )
