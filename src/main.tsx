@@ -8,11 +8,13 @@ import './index.css'
 
 import { routeTree } from './routeTree.gen'
 
-scan({
-  enabled: !import.meta.env.PROD,
-})
+if (!import.meta.env.PROD) {
+  scan({
+    enabled: true,
+  })
+}
 
-const router = createRouter({ routeTree })
+const router = createRouter({ routeTree, notFoundMode: 'root' })
 
 declare module '@tanstack/react-router' {
   interface Register {

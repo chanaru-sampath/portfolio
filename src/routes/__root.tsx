@@ -2,6 +2,7 @@ import { lazy, Suspense } from 'react'
 import { createRootRoute, Outlet } from '@tanstack/react-router'
 
 import Header from '@/components/header'
+import NotFound from '@/components/not-found'
 
 const TanStackRouterDevtools = import.meta.env.PROD
   ? () => null
@@ -15,7 +16,9 @@ const RootComponent = () => (
   <>
     <div className="mx-auto max-w-[1200px] px-5">
       <Header />
-      <Outlet />
+      <main>
+        <Outlet />
+      </main>
     </div>
 
     <Suspense>
@@ -26,4 +29,5 @@ const RootComponent = () => (
 
 export const Route = createRootRoute({
   component: RootComponent,
+  notFoundComponent: NotFound,
 })
