@@ -1,11 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router'
 
-import ComingSoon from '@/components/coming-soon'
+import WorkPage from '@/pages/work-page'
 
 export const Route = createFileRoute('/work')({
   component: WorkPage,
 })
-
-function WorkPage() {
-  return <ComingSoon />
-}
