@@ -10,7 +10,7 @@ import { routeTree } from './routeTree.gen'
 
 if (!import.meta.env.PROD) {
   scan({
-    enabled: true,
+    enabled: false,
   })
 }
 

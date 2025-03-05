@@ -8,12 +8,14 @@
 
 :root {
   --background: oklch(20.99% 0.0341 263.44);
+  --background-secondary: oklch(0.3 0.04 263.99);
   --accent: oklch(87.91% 0.2134 155.95);
   --accent-hover: oklch(80.31% 0.1799 160.6);
 }
 
 .dark {
   --background: oklch(20.99% 0.0341 263.44);
+  --background-secondary: oklch(0.3 0.04 263.99);
   --accent: oklch(0.7 0.2 44.36);
   --accent-hover: oklch(80.31% 0.1799 160.6);
 }
@@ -31,6 +33,7 @@
 
   /* Colors */
   --color-background: var(--background);
+  --color-background-secondary: var(--background-secondary);
   --color-accent: var(--accent);
   --color-accent-hover: var(--accent-hover);
 }
