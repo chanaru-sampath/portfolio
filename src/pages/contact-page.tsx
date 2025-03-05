@@ -2,6 +2,7 @@ import { CiPhone } from 'react-icons/ci'
 import { IoIosMail, IoIosPin } from 'react-icons/io'
 
 import ContactForm from '@/components/forms/contact-form'
+import { Separator } from '@/components/ui/separator'
 
 const contacts = [
   { name: 'phone', icon: CiPhone, value: '+94 717155557' },
@@ -32,7 +33,9 @@ const ContactPage = () => {
         <ContactForm />
       </div>
 
-      <div className="flex flex-col justify-center gap-3 lg:gap-[20px] mt-6 mb-8 lg:mt-0">
+      <Separator className="my-4 bg-background-secondary lg:hidden" />
+
+      <div className="flex flex-col justify-center gap-3 lg:gap-[20px] mb-8 lg:mt-0">
         {contacts.map((c) => (
           <div className="flex items-center justify-start gap-8">
             <div className="flex items-center justify-center w-[48px] h-[48px] lg:w-[72px] lg:h-[72px] bg-background-secondary rounded-md">
