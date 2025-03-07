@@ -1,5 +1,6 @@
 import { Link, useMatchRoute } from '@tanstack/react-router'
 import { CiMenuFries } from 'react-icons/ci'
+import { motion } from 'framer-motion'
 
 import { cn } from '@/lib/utils'
 
@@ -28,16 +29,26 @@ export const DesktopNav = () => {
         const isActive = matchRoute({ to: link.path })
 
         return (
-          <Link
+          <motion.span
             className={cn(
-              'uppercase font-medium hover:text-accent transition-all',
-              isActive && 'text-accent border-b-2 border-accent'
+              'relative uppercase font-medium hover:text-accent transition-all',
+              isActive && 'text-accent'
             )}
-            key={link.name}
-            to={link.path}
+            initial={{ '--scaleX': 0 }}
+            animate={{ '--scaleX': isActive ? 1 : 0 }}
+            transition={{ duration: 0.3, ease: 'easeOut' }}
+            style={{ position: 'relative' }}
           >
-            {link.name}
-          </Link>
+            <Link key={link.name} to={link.path}>
+              {link.name}
+            </Link>
+            <motion.div
+              className="absolute bottom-0 left-0 h-[2px] bg-accent w-full"
+              style={{ scaleX: 0, transformOrigin: 'left' }}
+              animate={{ scaleX: isActive ? 1 : 0 }}
+              transition={{ duration: 0.3, ease: 'easeOut' }}
+            />
+          </motion.span>
         )
       })}
     </nav>
