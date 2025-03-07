@@ -28,7 +28,7 @@ const JobTitle = ({ className }: { className?: string }) => {
   return (
     <div
       className={cn(
-        'relative w-auto h-12 overflow-hidden flex items-center justify-start',
+        'relative w-auto h-12 overflow-hidden flex items-center justify-center lg:justify-start',
         className
       )}
     >
