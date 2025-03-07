@@ -17,6 +17,7 @@ const contacts = [
 const ContactPage = () => {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-[68px]">
+      {/** Form */}
       <div>
         <div className="mb-6">
           <h2 className="font-medium text-3xl mb-4">
@@ -35,6 +36,7 @@ const ContactPage = () => {
 
       <Separator className="my-4 bg-background-secondary lg:hidden" />
 
+      {/** Info */}
       <div className="flex flex-col justify-center gap-3 lg:gap-[20px] mb-8 lg:mt-0">
         {contacts.map((c) => (
           <div className="flex items-center justify-start gap-8">
