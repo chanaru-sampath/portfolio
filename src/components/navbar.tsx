@@ -1,9 +1,10 @@
 import { Link, useMatchRoute } from '@tanstack/react-router'
-import { CiMenuFries } from 'react-icons/ci'
 import { motion } from 'framer-motion'
+import { CiMenuFries } from 'react-icons/ci'
 
 import { cn } from '@/lib/utils'
 
+import Logo from './logo'
 import {
   Sheet,
   SheetClose,
@@ -11,7 +12,6 @@ import {
   SheetHeader,
   SheetTrigger,
 } from './ui/sheet'
-import Logo from './logo'
 
 const navLinks = [
   { name: 'home', path: '/' },

@@ -1,5 +1,6 @@
 import { Link } from '@tanstack/react-router'
 import { IoLogoFacebook, IoLogoGithub, IoLogoLinkedin } from 'react-icons/io'
+
 import JobTitle from '@/components/job-title'
 import { Button } from '@/components/ui/button'
 

@@ -1,9 +1,9 @@
-import { FaReact, FaNodeJs, FaHtml5 } from 'react-icons/fa'
-import { SiRedux, SiTypescript } from 'react-icons/si'
-import { IoLogoJavascript, IoLogoFirebase } from 'react-icons/io5'
-import { RiNextjsFill } from 'react-icons/ri'
-import { IoLogoCss3 } from 'react-icons/io'
 import { DiGoogleCloudPlatform } from 'react-icons/di'
+import { FaHtml5, FaNodeJs, FaReact } from 'react-icons/fa'
+import { IoLogoCss3 } from 'react-icons/io'
+import { IoLogoFirebase, IoLogoJavascript } from 'react-icons/io5'
+import { RiNextjsFill } from 'react-icons/ri'
+import { SiRedux, SiTypescript } from 'react-icons/si'
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import {
