@@ -13,6 +13,16 @@ import {
   TooltipTrigger,
 } from '@/components/ui/tooltip'
 
+const experiences = {
+  title: 'Experience',
+  description: 'coming soon!',
+}
+
+const education = {
+  title: 'Education',
+  description: 'coming soon!',
+}
+
 const personalInfo = {
   title: 'About Me',
   description:
@@ -61,8 +71,22 @@ const ResumePage = () => {
           <TabsTrigger value="aboutme">About Me</TabsTrigger>
         </TabsList>
         <div className="">
-          <TabsContent value="experience">Experience</TabsContent>
-          <TabsContent value="education">Education</TabsContent>
+          <TabsContent value="experience">
+            <div className="flex flex-col items-center lg:items-start">
+              <h1 className="text-2xl mb-2 lg:mb-4">{experiences.title}</h1>
+              <p className="text-white/80 text-center lg:text-start leading-6">
+                {experiences.description}
+              </p>
+            </div>
+          </TabsContent>
+          <TabsContent value="education">
+            <div className="flex flex-col items-center lg:items-start">
+              <h1 className="text-2xl mb-2 lg:mb-4">{education.title}</h1>
+              <p className="text-white/80 text-center lg:text-start leading-6">
+                {education.description}
+              </p>
+            </div>
+          </TabsContent>
           <TabsContent value="skills">
             <div className="flex flex-col items-center lg:items-start">
               <h1 className="text-2xl mb-2 lg:mb-4">{skills.title}</h1>
