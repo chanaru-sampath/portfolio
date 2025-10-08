@@ -1,9 +1,9 @@
-import { DiGoogleCloudPlatform } from 'react-icons/di'
+import { DiGit, DiGoogleCloudPlatform } from 'react-icons/di'
 import { FaHtml5, FaNodeJs, FaReact } from 'react-icons/fa'
 import { IoLogoCss3 } from 'react-icons/io'
 import { IoLogoFirebase, IoLogoJavascript } from 'react-icons/io5'
 import { RiNextjsFill } from 'react-icons/ri'
-import { SiRedux, SiTypescript } from 'react-icons/si'
+import { SiNestjs, SiRedux, SiTypescript } from 'react-icons/si'
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import {
@@ -38,10 +38,12 @@ const skills = {
     { name: 'Css', icon: IoLogoCss3 },
     { name: 'ReactJs', icon: FaReact },
     { name: 'NextJs', icon: RiNextjsFill },
+    { name: 'NestJs', icon: SiNestjs },
     { name: 'NodeJs', icon: FaNodeJs },
     { name: 'Redux', icon: SiRedux },
     { name: 'Firebase', icon: IoLogoFirebase },
     { name: 'Google Cloud', icon: DiGoogleCloudPlatform },
+    { name: 'Git', icon: DiGit },
   ],
 }
 
@@ -59,8 +61,8 @@ const ResumePage = () => {
           <TabsTrigger value="aboutme">About Me</TabsTrigger>
         </TabsList>
         <div className="">
-          <TabsContent value="experience">experience</TabsContent>
-          <TabsContent value="education">education</TabsContent>
+          <TabsContent value="experience">Experience</TabsContent>
+          <TabsContent value="education">Education</TabsContent>
           <TabsContent value="skills">
             <div className="flex flex-col items-center lg:items-start">
               <h1 className="text-2xl mb-2 lg:mb-4">{skills.title}</h1>
