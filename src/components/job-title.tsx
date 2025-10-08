@@ -1,5 +1,7 @@
-import { useState, useEffect } from 'react'
+import { useEffect, useState } from 'react'
+
 import { AnimatePresence, motion } from 'framer-motion'
+
 import { cn } from '@/lib/utils'
 
 const titles = ['Senior Software Engineer', 'JavaScript Fullstack Engineer']
@@ -28,7 +30,7 @@ const JobTitle = ({ className }: { className?: string }) => {
   return (
     <div
       className={cn(
-        'relative w-auto h-12 overflow-hidden flex items-center justify-start',
+        'relative w-auto h-12 overflow-hidden flex items-center justify-center lg:justify-start',
         className
       )}
     >

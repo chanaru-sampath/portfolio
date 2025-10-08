@@ -1,8 +1,9 @@
 import * as React from 'react'
+
 import * as SheetPrimitive from '@radix-ui/react-dialog'
+import { IoMdClose } from 'react-icons/io'
 
 import { cn } from '@/lib/utils'
-import { IoMdClose } from 'react-icons/io'
 
 function Sheet({ ...props }: React.ComponentProps<typeof SheetPrimitive.Root>) {
   return <SheetPrimitive.Root data-slot="sheet" {...props} />

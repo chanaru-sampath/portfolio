@@ -1,11 +1,10 @@
+import { StrictMode } from 'react'
+
+import { RouterProvider, createRouter } from '@tanstack/react-router'
+import { createRoot } from 'react-dom/client'
 import { scan } from 'react-scan'
 
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import { RouterProvider, createRouter } from '@tanstack/react-router'
-
 import './index.css'
-
 import { routeTree } from './routeTree.gen'
 
 if (!import.meta.env.PROD) {

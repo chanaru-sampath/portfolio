@@ -1,5 +1,6 @@
-import { lazy, Suspense } from 'react'
-import { createRootRoute, Outlet } from '@tanstack/react-router'
+import { Suspense, lazy } from 'react'
+
+import { Outlet, createRootRoute } from '@tanstack/react-router'
 
 import Header from '@/components/header'
 import NotFound from '@/components/not-found'
