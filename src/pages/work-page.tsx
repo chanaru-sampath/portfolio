@@ -1,7 +1,12 @@
 import ComingSoon from '@/components/coming-soon'
+import PageTransition from '@/components/page-transition'
 
 const WorkPage = () => {
-  return <ComingSoon />
+  return (
+    <PageTransition>
+      <ComingSoon />
+    </PageTransition>
+  )
 }
 
 export default WorkPage
