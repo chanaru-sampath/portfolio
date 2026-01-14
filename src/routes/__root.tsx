@@ -1,30 +1,16 @@
-import { Suspense, lazy } from 'react'
-
 import { Outlet, createRootRoute } from '@tanstack/react-router'
 
 import Header from '@/components/header'
 import NotFound from '@/components/not-found'
 
-const TanStackRouterDevtools = import.meta.env.PROD
-  ? () => null
-  : lazy(() =>
-      import('@tanstack/router-devtools').then((res) => ({
-        default: res.TanStackRouterDevtools,
-      }))
-    )
-
 const RootComponent = () => (
   <>
-    <div className="mx-auto max-w-[1200px] px-5">
+    <div className="mx-auto max-w-[1200px] px-5 bg-background min-h-screen border-l border-r border-black/10 shadow-2xl">
       <Header />
       <main>
         <Outlet />
       </main>
     </div>
-
-    <Suspense>
-      <TanStackRouterDevtools />
-    </Suspense>
   </>
 )
 
