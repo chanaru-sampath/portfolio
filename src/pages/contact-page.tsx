@@ -1,60 +1,75 @@
-import { CiPhone } from 'react-icons/ci'
-import { IoIosMail, IoIosPin } from 'react-icons/io'
-
 import ContactForm from '@/components/forms/contact-form'
-import PageTransition from '@/components/page-transition'
-import { Separator } from '@/components/ui/separator'
-
-const contacts = [
-  { name: 'phone', icon: CiPhone, value: '+94 717155557' },
-  { name: 'email', icon: IoIosMail, value: 'chanarusampath@gmail.com' },
-  {
-    name: 'address',
-    icon: IoIosPin,
-    value: 'Minuwangoda, Sri Lanka.',
-  },
-]
+import {
+  MainColumn,
+  NewspaperGrid,
+  SideColumn,
+} from '@/components/newspaper/NewspaperGrid'
 
 const ContactPage = () => {
   return (
-    <PageTransition>
-      <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-[68px]">
-        {/** Form */}
-        <div>
-          <div className="mb-6">
-            <h2 className="font-medium text-3xl mb-4">
-              <span className="text-accent">Get </span>in Touch
-            </h2>
-            <p className="leading-[1.5] lg:text-sm">
-              Have a project <span className="text-accent">idea</span>, a
-              collaboration opportunity, or just want to connect? Feel free to
-              reach out! I'm always open to discussing new challenges,
-              innovative ideas, and exciting opportunities in software
-              development. Drop me a message, and I'll get back to you as soon
-              as possible.
+    <div className="container mx-auto pb-20">
+      <div className="border-b-4 border-black mb-8 text-center pb-2">
+        <h2 className="font-masthead text-5xl md:text-7xl">
+          Letters to the Editor
+        </h2>
+        <p className="font-mono uppercase tracking-widest text-sm mt-2">
+          Voice of the People
+        </p>
+      </div>
+
+      <NewspaperGrid>
+        <MainColumn>
+          <div className="bg-stone-100 p-8 border-2 border-black">
+            <h3 className="font-headline text-3xl mb-4 text-center">
+              Submit Your Query
+            </h3>
+            <p className="font-body text-center mb-8 italic">
+              "We welcome all correspondence, provided it is written with
+              purpose and clarity."
             </p>
+            <ContactForm />
           </div>
-          <ContactForm />
-        </div>
+        </MainColumn>
 
-        <Separator className="my-4 bg-background-secondary lg:hidden" />
-
-        {/** Info */}
-        <div className="flex flex-col justify-center gap-3 lg:gap-[20px] mb-8 lg:mt-0">
-          {contacts.map((c) => (
-            <div className="flex items-center justify-start gap-8">
-              <div className="flex items-center justify-center w-[48px] h-[48px] lg:w-[72px] lg:h-[72px] bg-background-secondary rounded-md">
-                <c.icon className="text-4xl text-white/70" />
+        <SideColumn>
+          <div className="border-2 border-dashed border-black p-4 bg-white">
+            <h4 className="font-headline text-2xl mb-4 border-b border-black pb-2 text-center">
+              Office Headquarters
+            </h4>
+            <address className="not-italic font-mono text-sm space-y-4 text-center">
+              <div>
+                <strong className="block uppercase text-xs text-gray-500">
+                  Post
+                </strong>
+                Minuwangoda, Sri Lanka
               </div>
               <div>
-                <p className="text-white/70 capitalize">{c.name}</p>
-                <h2 className="font-semibold">{c.value}</h2>
+                <strong className="block uppercase text-xs text-gray-500">
+                  Wire
+                </strong>
+                +94 717 155 557
               </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </PageTransition>
+              <div>
+                <strong className="block uppercase text-xs text-gray-500">
+                  Electronic Mail
+                </strong>
+                chanarusampath@gmail.com
+              </div>
+            </address>
+          </div>
+
+          <div className="mt-8 text-center p-4 border border-black bg-black text-white">
+            <h5 className="font-headline text-xl mb-2 text-white">
+              Subscription Notice
+            </h5>
+            <p className="font-mono text-xs text-white">
+              Replies are dispatched via digital courier within 24-48 hours of
+              receipt.
+            </p>
+          </div>
+        </SideColumn>
+      </NewspaperGrid>
+    </div>
   )
 }
 

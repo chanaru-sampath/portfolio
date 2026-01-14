@@ -19,6 +19,20 @@ import {
 import { Input } from '../ui/input'
 import { Textarea } from '../ui/textarea'
 
+const VintageInput = ({ ...props }) => (
+  <Input
+    {...props}
+    className="border-0 border-b-2 border-black rounded-none shadow-none focus-visible:ring-0 focus-visible:border-black bg-transparent px-0 font-mono placeholder:text-gray-400"
+  />
+)
+
+const VintageTextarea = ({ ...props }) => (
+  <Textarea
+    {...props}
+    className="border-2 border-dashed border-black rounded-none shadow-none focus-visible:ring-0 focus-visible:border-black bg-transparent font-mono placeholder:text-gray-400 min-h-[150px]"
+  />
+)
+
 const ContactForm = () => {
   const form = useForm<TContactForm>({
     resolver: zodResolver(ContactFormSchema),
@@ -37,7 +51,7 @@ const ContactForm = () => {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)}>
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
         <FormField
           control={form.control}
           name="email"
@@ -45,18 +59,23 @@ const ContactForm = () => {
             const hasError = !!form.formState.errors.email
 
             return (
-              <FormItem className="mb-4">
-                <FormLabel className={cn(hasError && 'text-red-700')}>
-                  Email <FormMessage />
+              <FormItem>
+                <FormLabel
+                  className={cn(
+                    'uppercase font-bold tracking-wider text-xs',
+                    hasError && 'text-red-700'
+                  )}
+                >
+                  Email Address <FormMessage />
                 </FormLabel>
                 <FormControl>
-                  <Input placeholder="chanarusampath@gmail.com" {...field} />
+                  <VintageInput placeholder="citizen@example.com" {...field} />
                 </FormControl>
               </FormItem>
             )
           }}
         />
-        <div className="block lg:grid lg:grid-cols-2 lg:gap-4">
+        <div className="block lg:grid lg:grid-cols-2 lg:gap-8">
           <FormField
             control={form.control}
             name="firstName"
@@ -64,12 +83,17 @@ const ContactForm = () => {
               const hasError = !!form.formState.errors.firstName
 
               return (
-                <FormItem className="mb-4">
-                  <FormLabel className={cn(hasError && 'text-red-700')}>
+                <FormItem className="mb-4 lg:mb-0">
+                  <FormLabel
+                    className={cn(
+                      'uppercase font-bold tracking-wider text-xs',
+                      hasError && 'text-red-700'
+                    )}
+                  >
                     First Name <FormMessage />
                   </FormLabel>
                   <FormControl>
-                    <Input placeholder="Chanaru" {...field} />
+                    <VintageInput placeholder="Chanaru" {...field} />
                   </FormControl>
                 </FormItem>
               )
@@ -82,12 +106,17 @@ const ContactForm = () => {
               const hasError = !!form.formState.errors.lastName
 
               return (
-                <FormItem className="mb-4">
-                  <FormLabel className={cn(hasError && 'text-red-700')}>
+                <FormItem>
+                  <FormLabel
+                    className={cn(
+                      'uppercase font-bold tracking-wider text-xs',
+                      hasError && 'text-red-700'
+                    )}
+                  >
                     Last Name <FormMessage />
                   </FormLabel>
                   <FormControl>
-                    <Input placeholder="Sampath" {...field} />
+                    <VintageInput placeholder="Sampath" {...field} />
                   </FormControl>
                 </FormItem>
               )
@@ -98,10 +127,12 @@ const ContactForm = () => {
           control={form.control}
           name="phone"
           render={({ field }) => (
-            <FormItem className="mb-4">
-              <FormLabel>Phone Number</FormLabel>
+            <FormItem>
+              <FormLabel className="uppercase font-bold tracking-wider text-xs">
+                Phone Number
+              </FormLabel>
               <FormControl>
-                <Input placeholder="+94717155557" {...field} />
+                <VintageInput placeholder="+94 717 155 557" {...field} />
               </FormControl>
             </FormItem>
           )}
@@ -113,19 +144,30 @@ const ContactForm = () => {
             const hasError = !!form.formState.errors.message
 
             return (
-              <FormItem className="mb-4">
-                <FormLabel className={cn(hasError && 'text-red-700')}>
-                  Message <FormMessage />
+              <FormItem>
+                <FormLabel
+                  className={cn(
+                    'uppercase font-bold tracking-wider text-xs',
+                    hasError && 'text-red-700'
+                  )}
+                >
+                  Your Correspondence <FormMessage />
                 </FormLabel>
                 <FormControl>
-                  <Textarea {...field} />
+                  <VintageTextarea
+                    placeholder="Type your message here..."
+                    {...field}
+                  />
                 </FormControl>
               </FormItem>
             )
           }}
         />
-        <Button className="w-full lg:w-fit" variant="outline" type="submit">
-          Submit
+        <Button
+          className="w-full text-white rounded-none border-2 border-black bg-black hover:bg-white hover:text-black uppercase font-bold tracking-widest text-sm py-6 transition-all"
+          type="submit"
+        >
+          Send via Post
         </Button>
       </form>
     </Form>
