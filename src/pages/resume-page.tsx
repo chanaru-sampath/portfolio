@@ -8,7 +8,7 @@ import {
   MainColumn,
   NewspaperGrid,
   SideColumn,
-} from '@/components/newspaper/NewspaperGrid'
+} from '@/components/newspaper/newspaper-grid'
 
 const skills = [
   { name: 'JavaScript', icon: IoLogoJavascript },

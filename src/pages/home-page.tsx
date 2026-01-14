@@ -3,7 +3,7 @@ import {
   MainColumn,
   NewspaperGrid,
   SideColumn,
-} from '@/components/newspaper/NewspaperGrid'
+} from '@/components/newspaper/newspaper-grid'
 import { Button } from '@/components/ui/button'
 
 const HomePage = () => {
