@@ -1,10 +1,10 @@
 /* eslint-disable react/no-unescaped-entities */
+import { Button } from '@/components/ui/button'
 import {
   MainColumn,
   NewspaperGrid,
   SideColumn,
-} from '@/components/newspaper/newspaper-grid'
-import { Button } from '@/components/ui/button'
+} from '@/themes/newspaper/components/newspaper-grid'
 
 const HomePage = () => {
   return (

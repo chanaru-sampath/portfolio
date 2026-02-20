@@ -1,0 +1,22 @@
+/* Terminal Theme — Placeholder */
+/* TODO: Implement full terminal theme (CRT scanlines, typewriter animations, green-on-black, ASCII art) */
+
+[data-theme='terminal'] {
+  --tm-bg: #0c0c0c;
+  --tm-green: #00ff41;
+  --tm-font: 'JetBrains Mono', 'Courier New', monospace;
+  --background: #0c0c0c;
+  --foreground: #00ff41;
+  background: var(--tm-bg);
+  color: var(--tm-green);
+  font-family: var(--tm-font);
+  font-size: 14px;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+[data-theme='terminal'] body {
+  background: #0c0c0c;
+  background-image: none;
+  color: #00ff41;
+}

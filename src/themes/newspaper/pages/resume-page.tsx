@@ -8,7 +8,7 @@ import {
   MainColumn,
   NewspaperGrid,
   SideColumn,
-} from '@/components/newspaper/newspaper-grid'
+} from '@/themes/newspaper/components/newspaper-grid'
 
 const skills = [
   { name: 'JavaScript', icon: IoLogoJavascript },
@@ -37,7 +37,6 @@ const ResumePage = () => {
             </h2>
 
             <div className="space-y-8">
-              {/* Job 1 */}
               <article className="border-l-2 border-black pl-4">
                 <h3 className="font-headline text-2xl font-bold">
                   Senior Software Engineer
@@ -56,7 +55,6 @@ const ResumePage = () => {
                 </p>
               </article>
 
-              {/* Job 2 */}
               <article className="border-l-2 border-black pl-4">
                 <h3 className="font-headline text-2xl font-bold">
                   Senior Software Engineer
@@ -74,7 +72,6 @@ const ResumePage = () => {
                 </p>
               </article>
 
-              {/* Job 3 */}
               <article className="border-l-2 border-black pl-4">
                 <h3 className="font-headline text-2xl font-bold">
                   Fullstack Engineer
@@ -91,7 +88,6 @@ const ResumePage = () => {
                 </p>
               </article>
 
-              {/* Job 4 */}
               <article className="border-l-2 border-black pl-4">
                 <h3 className="font-headline text-2xl font-bold">
                   Frontend Engineer
@@ -107,7 +103,6 @@ const ResumePage = () => {
                 </p>
               </article>
 
-              {/* Job 5 */}
               <article className="border-l-2 border-black pl-4">
                 <h3 className="font-headline text-2xl font-bold">
                   Software Engineer
@@ -152,7 +147,6 @@ const ResumePage = () => {
         </MainColumn>
 
         <SideColumn>
-          {/* Personal Info Box */}
           <div className="border-4 border-double border-black p-6 mb-8 bg-stone-100">
             <h3 className="font-headline text-2xl text-center mb-4 border-b border-black pb-2">
               Personal File
@@ -186,7 +180,6 @@ const ResumePage = () => {
             </ul>
           </div>
 
-          {/* Skills "Classifieds" */}
           <div className="mb-8">
             <h3 className="font-headline text-2xl uppercase border-b-2 border-black pb-1 mb-4">
               Skill Market
@@ -206,7 +199,6 @@ const ResumePage = () => {
             </div>
           </div>
 
-          {/* References Box */}
           <div className="border border-black p-4 bg-white">
             <h3 className="font-headline text-xl uppercase mb-2 text-center bg-black text-white p-1">
               References

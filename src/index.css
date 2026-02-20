@@ -53,6 +53,20 @@
     background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.05'/%3E%3C/svg%3E");
   }
 
+  /* Override body styles for non-newspaper themes (loaded eagerly, not lazily) */
+  [data-theme='terminal'] body {
+    background: #0c0c0c;
+    background-image: none;
+    color: #00ff41;
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
+  }
+  [data-theme='win98'] body {
+    background: #008080;
+    background-image: none;
+    color: #000000;
+    font-family: 'Microsoft Sans Serif', Arial, sans-serif;
+  }
+
   h1,
   h2,
   h3,
