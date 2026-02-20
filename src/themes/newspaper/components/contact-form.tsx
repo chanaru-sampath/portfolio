@@ -1,13 +1,7 @@
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
 
-import { cn } from '@/lib/utils'
-import {
-  ContactFormSchema,
-  type TContactForm,
-} from '@/schemas/contact-form-schema'
-
-import { Button } from '../ui/button'
+import { Button } from '@/components/ui/button'
 import {
   Form,
   FormControl,
@@ -15,9 +9,14 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '../ui/form'
-import { Input } from '../ui/input'
-import { Textarea } from '../ui/textarea'
+} from '@/components/ui/form'
+import { Input } from '@/components/ui/input'
+import { Textarea } from '@/components/ui/textarea'
+import { cn } from '@/lib/utils'
+import {
+  ContactFormSchema,
+  type TContactForm,
+} from '@/schemas/contact-form-schema'
 
 const VintageInput = ({ ...props }) => (
   <Input

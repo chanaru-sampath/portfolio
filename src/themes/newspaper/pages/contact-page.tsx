@@ -1,9 +1,9 @@
-import ContactForm from '@/components/forms/contact-form'
+import ContactForm from '@/themes/newspaper/components/contact-form'
 import {
   MainColumn,
   NewspaperGrid,
   SideColumn,
-} from '@/components/newspaper/newspaper-grid'
+} from '@/themes/newspaper/components/newspaper-grid'
 
 const ContactPage = () => {
   return (
@@ -24,8 +24,8 @@ const ContactPage = () => {
               Submit Your Query
             </h3>
             <p className="font-body text-center mb-8 italic">
-              "We welcome all correspondence, provided it is written with
-              purpose and clarity."
+              &quot;We welcome all correspondence, provided it is written with
+              purpose and clarity.&quot;
             </p>
             <ContactForm />
           </div>

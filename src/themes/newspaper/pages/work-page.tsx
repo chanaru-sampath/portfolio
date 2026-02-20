@@ -1,8 +1,8 @@
+import { Button } from '@/components/ui/button'
 import {
   MainColumn,
   NewspaperGrid,
-} from '@/components/newspaper/newspaper-grid'
-import { Button } from '@/components/ui/button'
+} from '@/themes/newspaper/components/newspaper-grid'
 
 const projects = [
   {

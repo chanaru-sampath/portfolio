@@ -1,0 +1,22 @@
+/* Win98 Theme — Placeholder */
+/* TODO: Implement full Windows 98 theme (window chrome, raised/sunken bevels, taskbar, classic OS UI) */
+
+[data-theme='win98'] {
+  --w98-bg: #008080;
+  --w98-win-bg: #c0c0c0;
+  --w98-text: #000000;
+  --w98-font: 'Microsoft Sans Serif', Arial, sans-serif;
+  --background: #008080;
+  --foreground: #000000;
+  background: var(--w98-bg);
+  color: var(--w98-text);
+  font-family: var(--w98-font);
+  font-size: 11px;
+  min-height: 100vh;
+}
+
+[data-theme='win98'] body {
+  background: #008080;
+  background-image: none;
+  color: #000000;
+}
