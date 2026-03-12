@@ -84,12 +84,32 @@ const ResumePage = () => {
                 padding: '4px 12px',
                 background: '#c0c0c0',
                 border: '1px solid #808080',
+                borderLeft: 'none',
                 textDecoration: 'none',
                 color: '#000',
               }}
             >
               Contact
             </Link>
+            <a
+              href="/cv/chanaru-sampath.pdf"
+              download
+              style={{
+                marginLeft: 'auto',
+                padding: '4px 12px',
+                background: '#dfdfdf',
+                border: '1px solid #ffffff',
+                borderBottomColor: '#404040',
+                borderRightColor: '#404040',
+                textDecoration: 'none',
+                color: '#000',
+                display: 'flex',
+                alignItems: 'center',
+                gap: 4,
+              }}
+            >
+              💾 Download CV
+            </a>
           </div>
         </div>
 

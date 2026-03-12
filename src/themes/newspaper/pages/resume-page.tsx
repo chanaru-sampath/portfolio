@@ -177,6 +177,15 @@ const ResumePage = () => {
                   Email Me
                 </a>
               </li>
+              <li className="flex flex-col pt-2 mt-2 border-t border-dashed border-gray-400">
+                <a
+                  href="/cv/chanaru-sampath.pdf"
+                  download
+                  className="bg-black text-white text-center font-bold py-2 uppercase tracking-widest text-sm hover:bg-gray-800 transition-colors"
+                >
+                  Download CV
+                </a>
+              </li>
             </ul>
           </div>
 

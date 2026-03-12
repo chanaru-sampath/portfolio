@@ -1,35 +1,9 @@
 import { Button } from '@/components/ui/button'
+import { projects } from '@/data/portfolio'
 import {
   MainColumn,
   NewspaperGrid,
 } from '@/themes/newspaper/components/newspaper-grid'
-
-const projects = [
-  {
-    title: 'E-Commerce Giant Goes Modular',
-    category: 'Architecture',
-    date: 'Oct 12, 2023',
-    excerpt:
-      'In a stunning turn of events, the monolith was dismantled. Micro-services now rule the land, bringing 99.99% uptime to the masses.',
-    tech: ['Next.js', 'Node.js', 'AWS'],
-  },
-  {
-    title: 'AI Chatbot Passes Touring Test',
-    category: 'Innovation',
-    date: 'Sep 05, 2023',
-    excerpt:
-      'Local algorithm creates poetry so beautiful it made a senior developer cry. "I have never seen such clean code," witnesses report.',
-    tech: ['OpenAI', 'React', 'Python'],
-  },
-  {
-    title: 'Dashboard Revolutionizes Analytics',
-    category: 'Enterprise',
-    date: 'Aug 20, 2023',
-    excerpt:
-      'Data visualization reaches new heights. Executives reportedly "actually understand" the Q3 projections for the first time in history.',
-    tech: ['D3.js', 'Vue', 'Firebase'],
-  },
-]
 
 const WorkPage = () => {
   return (
@@ -53,9 +27,9 @@ const WorkPage = () => {
               >
                 <div className="border-b border-black pb-2 mb-3 flex justify-between font-mono text-xs uppercase">
                   <span className="bg-black text-white px-1">
-                    {project.category}
+                    {project.tags[0] || 'Experience'}
                   </span>
-                  <span>{project.date}</span>
+                  <span>{project.year}</span>
                 </div>
                 <div className="w-full aspect-video bg-neutral-200 mb-4 border border-black flex items-center justify-center grayscale">
                   <span className="font-mono text-xs">
@@ -65,11 +39,11 @@ const WorkPage = () => {
                 <h3 className="font-headline text-2xl leading-tight mb-2 font-bold">
                   {project.title}
                 </h3>
-                <p className="font-body text-sm mb-4 leading-relaxed text-justify">
-                  {project.excerpt}
+                <p className="font-body text-sm mb-4 leading-relaxed text-justify line-clamp-4">
+                  {project.description}
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tech.map((t) => (
+                  {project.tags.map((t) => (
                     <span
                       key={t}
                       className="text-xs font-mono border border-black px-1 rounded-full"

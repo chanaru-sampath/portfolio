@@ -102,8 +102,24 @@ const ResumePage = () => {
           <div style={{ marginTop: 8 }}>{personalInfo.email}</div>
         </div>
 
-        <div style={{ marginTop: 24 }}>
-          <span style={{ opacity: 0.5 }}>visitor@portfolio:~$ </span>
+        <div style={{ marginTop: 24, display: 'flex', alignItems: 'center' }}>
+          <span style={{ opacity: 0.5, marginRight: 8 }}>
+            visitor@portfolio:~${' '}
+          </span>
+          <a
+            href="/cv/chanaru-sampath.pdf"
+            download
+            style={{
+              color: '#00ff41',
+              textDecoration: 'none',
+              border: '1px solid #004d13',
+              padding: '2px 8px',
+              marginRight: 8,
+              fontSize: 13,
+            }}
+          >
+            wget ~/resume.pdf
+          </a>
           <span
             style={{
               display: 'inline-block',
@@ -111,6 +127,7 @@ const ResumePage = () => {
               height: 14,
               background: '#00ff41',
               verticalAlign: 'middle',
+              animation: 'blink 1s step-end infinite',
             }}
           />
         </div>
