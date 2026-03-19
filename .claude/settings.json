@@ -1,0 +1,5 @@
+{
+  "env": {
+    "ANTHROPIC_MODEL": "qwen/qwen3-coder:free"
+  }
+}
