@@ -20,9 +20,9 @@ const WorkPage = () => {
       <NewspaperGrid>
         <MainColumn className="lg:col-span-12">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project, index) => (
+            {projects.map((project) => (
               <article
-                key={index}
+                key={project.id}
                 className="border-2 border-black p-4 bg-white shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all"
               >
                 <div className="border-b border-black pb-2 mb-3 flex justify-between font-mono text-xs uppercase">

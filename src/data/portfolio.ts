@@ -13,6 +13,7 @@ export const personalInfo = {
 
 export const projects: ProjectCardProps[] = [
   {
+    id: 'avlyon',
     title: 'Avlyon',
     description:
       'Leading the design and development of scalable end-to-end solutions across web, mobile, and backend platforms. Building high-performance front-end interfaces with React.js, developing cross-platform mobile applications with React Native, and implementing robust backend services to ensure seamless integration, reliability, and scalability across all products.',
@@ -22,6 +23,7 @@ export const projects: ProjectCardProps[] = [
     liveUrl: undefined,
   },
   {
+    id: 'circles-life',
     title: 'Circles Life',
     description:
       'Building and optimizing front-end applications using TypeScript and React to deliver seamless and responsive user experiences. Contributing to backend development with Java Spring Boot and Go, helping design and maintain scalable, high-performance services. Mentoring junior engineers and leading a cross-functional team of 6–8 members.',
@@ -31,6 +33,7 @@ export const projects: ProjectCardProps[] = [
     liveUrl: undefined,
   },
   {
+    id: 'sprii',
     title: 'Sprii',
     description:
       'Developed scalable web and mobile apps using Next.js, React Native, and Node.js. Managed cloud infrastructure on GCP, automated deployments with Terraform, and optimized performance across frontend and backend systems.',
@@ -40,6 +43,7 @@ export const projects: ProjectCardProps[] = [
     liveUrl: undefined,
   },
   {
+    id: 'netstarter',
     title: 'Netstarter',
     description:
       'Worked on Magento-based eCommerce frontends using React and jQuery, developing responsive, high-performance interfaces and enhancing user experiences through modern UI practices.',
@@ -49,6 +53,7 @@ export const projects: ProjectCardProps[] = [
     liveUrl: undefined,
   },
   {
+    id: 'virtusa',
     title: 'Virtusa',
     description:
       'Worked on Pega Systems to design, develop, and maintain business process management solutions, focusing on workflow automation, system integration, and performance optimization for enterprise clients.',

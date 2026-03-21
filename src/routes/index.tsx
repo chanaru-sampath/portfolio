@@ -1,22 +1,13 @@
 import { createFileRoute } from '@tanstack/react-router'
 
-import NewspaperHome from '@/themes/newspaper/pages/home-page'
-import TerminalHome from '@/themes/terminal/pages/home-page'
-import { type Theme, useTheme } from '@/themes/theme-context'
-import Win98Home from '@/themes/win98/pages/home-page'
+import { ThemePageRouter } from '@/components/theme-page-router'
+import { useTheme } from '@/themes/theme-context'
 
-const pages: Record<Theme, React.ComponentType> = {
-  newspaper: NewspaperHome,
-  terminal: TerminalHome,
-  win98: Win98Home,
-}
-
-function PageRouter() {
+const HomeRoute = () => {
   const theme = useTheme()
-  const Page = pages[theme]
-  return <Page />
+  return <ThemePageRouter page="home" theme={theme} />
 }
 
 export const Route = createFileRoute('/')({
-  component: PageRouter,
+  component: HomeRoute,
 })

@@ -1,22 +1,13 @@
 import { createFileRoute } from '@tanstack/react-router'
 
-import NewspaperContact from '@/themes/newspaper/pages/contact-page'
-import TerminalContact from '@/themes/terminal/pages/contact-page'
-import { type Theme, useTheme } from '@/themes/theme-context'
-import Win98Contact from '@/themes/win98/pages/contact-page'
+import { ThemePageRouter } from '@/components/theme-page-router'
+import { useTheme } from '@/themes/theme-context'
 
-const pages: Record<Theme, React.ComponentType> = {
-  newspaper: NewspaperContact,
-  terminal: TerminalContact,
-  win98: Win98Contact,
-}
-
-function PageRouter() {
+const ContactRoute = () => {
   const theme = useTheme()
-  const Page = pages[theme]
-  return <Page />
+  return <ThemePageRouter page="contact" theme={theme} />
 }
 
 export const Route = createFileRoute('/contact')({
-  component: PageRouter,
+  component: ContactRoute,
 })

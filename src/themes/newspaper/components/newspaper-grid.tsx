@@ -1,6 +1,6 @@
 import { cn } from '@/lib/utils'
 
-interface NewspaperGridProps {
+type NewspaperGridProps = {
   children: React.ReactNode
   className?: string
 }

@@ -1,5 +1,6 @@
 import { Outlet, createRootRoute } from '@tanstack/react-router'
 
+import { ErrorBoundary } from '@/components/error-boundary'
 import NotFound from '@/components/not-found'
 import Header from '@/themes/newspaper/components/header'
 import { ThemeProvider, useTheme } from '@/themes/theme-context'
@@ -9,17 +10,22 @@ const RootInner = () => {
 
   if (theme === 'newspaper') {
     return (
-      <div className="mx-auto max-w-[1200px] px-5 bg-background min-h-screen border-l border-r border-black/10 shadow-2xl">
-        <Header />
-        <main>
-          <Outlet />
-        </main>
-      </div>
+      <ErrorBoundary>
+        <div className="mx-auto max-w-[1200px] px-5 bg-background min-h-screen border-l border-r border-black/10 shadow-2xl">
+          <Header />
+          <main>
+            <Outlet />
+          </main>
+        </div>
+      </ErrorBoundary>
     )
   }
 
-  // Other themes handle their own layout in their pages
-  return <Outlet />
+  return (
+    <ErrorBoundary>
+      <Outlet />
+    </ErrorBoundary>
+  )
 }
 
 const RootComponent = () => (

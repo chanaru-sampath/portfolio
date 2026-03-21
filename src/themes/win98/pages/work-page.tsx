@@ -2,7 +2,7 @@ import { Link } from '@tanstack/react-router'
 
 import { projects } from '@/data/portfolio'
 
-const titleBar = (_title: string) => ({
+const titleBar = (_title?: string) => ({
   background: 'linear-gradient(to right, #000080, #1084d0)',
   color: 'white',
   fontWeight: 'bold' as const,

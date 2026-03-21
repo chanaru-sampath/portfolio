@@ -1,5 +1,5 @@
 {
   "env": {
-    "ANTHROPIC_MODEL": "qwen/qwen3-coder:free"
+    "ANTHROPIC_MODEL": "openrouter/free"
   }
 }

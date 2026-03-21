@@ -1,4 +1,5 @@
-export interface ProjectCardProps {
+export type ProjectCardProps = {
+  id: string
   title: string
   description: string
   tags: string[]
@@ -7,26 +8,26 @@ export interface ProjectCardProps {
   liveUrl?: string
 }
 
-export interface HeroProps {
+export type HeroProps = {
   name: string
   title: string
   summary: string
   avatarUrl: string
 }
 
-export interface NavProps {
+export type NavProps = {
   links: { label: string; to: string }[]
 }
 
-export interface LayoutProps {
+export type LayoutProps = {
   children: React.ReactNode
 }
 
-export interface ContactFormProps {
-  onSubmit: (data: any) => void
+export type ContactFormProps<T = unknown> = {
+  onSubmit: (data: T) => void
 }
 
-export interface ThemeComponents {
+export type ThemeComponents = {
   Layout: React.ComponentType<LayoutProps>
   Nav: React.ComponentType<NavProps>
   Hero: React.ComponentType<HeroProps>
